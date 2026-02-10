@@ -56,7 +56,43 @@ if result==a:
 else:
     print("Not Armstrong")
 
-#
+# print all factors of a number
+
+a=int(input())
+i=1
+result=[]
+while i<=a:
+    if a%i==0:
+        result.append(i)
+    i+=1
+print(result)
+
+# better solution use iteration till half of the input and append the input in last
+
+a=int(input())
+i=a//2
+p=1
+result=[]
+while p<=i:
+    if a%p==0:
+        result.append(p)
+    p+=1
+result.append(a)
+print(result)
+
+# optimal solution for factor of number use sqrt function and output is not in sequence so we do sort
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
