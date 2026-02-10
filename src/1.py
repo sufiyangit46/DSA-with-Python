@@ -96,6 +96,26 @@ while i<=p:
 result.sort()
 print(result)
 
+# Store frequency of number in dictionary
+
+list=[1,2,5,6,4,5,7,2,4]
+dict={}
+for i in range (1,len(list)):
+    if list[i] in dict:
+        dict[list[i]]+=1
+    else:
+        dict[list[i]]=1
+print(dict)
+
+# Method 2 using .get (hash map)
+
+list=[1,2,3,4,5,1,2,3,4]
+hash={}
+for i in range(len(list)):
+    hash[list[i]]=hash.get(list[i],0)+1
+print(hash)
+
+
 
 
 
