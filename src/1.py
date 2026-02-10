@@ -82,6 +82,19 @@ print(result)
 
 # optimal solution for factor of number use sqrt function and output is not in sequence so we do sort
 
+from math import sqrt
+a=int(input())
+i=1
+p=sqrt(a)
+result=[]
+while i<=p:
+    if a%i==0:
+        result.append(i)
+        if a//i!=i:
+            result.append(a//i)
+    i+=1
+result.sort()
+print(result)
 
 
 
