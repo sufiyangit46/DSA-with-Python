@@ -56,6 +56,7 @@ if result==a:
 else:
     print("Not Armstrong")
 
+#4
 # print all factors of a number
 
 a=int(input())
@@ -114,6 +115,23 @@ hash={}
 for i in range(len(list)):
     hash[list[i]]=hash.get(list[i],0)+1
 print(hash)
+
+#5
+# Hashing in Python # Brute method
+
+n=[5,3,2,1,7,7,5,5,5,9,10]
+m=[10,9,111,1,5,9,62]
+
+for num in m:
+    count=0
+    for i in n:
+        if i==num:
+            count+=1
+    print(count)
+
+
+
+
 
 
 
