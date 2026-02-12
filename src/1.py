@@ -142,6 +142,28 @@ for num in m:
     else:
         print(hash_list[num])
 
+#6
+# Hashing in Dictionary
+
+n=[5,3,2,1,7,7,5,5,5,9,10]
+m=[10,9,111,1,5,9,62]
+dict={}
+for i in n:
+    dict[i]=dict.get(i,0)+1
+for i in m:
+    print(dict.get(i,0))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
