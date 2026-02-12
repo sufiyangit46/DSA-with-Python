@@ -129,7 +129,7 @@ for num in m:
             count+=1
     print(count)
 
-#Optimal method
+#Optimal method    #List
 
 n=[5,3,2,1,7,7,5,5,5,9,10]
 m=[10,9,111,1,5,9,62]
@@ -152,6 +152,26 @@ for i in n:
     dict[i]=dict.get(i,0)+1
 for i in m:
     print(dict.get(i,0))
+
+# Character Hashing  #Brute method
+
+s='azyxyyzaaaa'
+q='d','a','y','x'
+for i in q:
+    count=0
+    for j in s:
+        if j==i:
+            count+=1
+    print(count)
+
+
+
+
+
+
+
+
+
 
 
 
