@@ -164,6 +164,30 @@ for i in q:
             count+=1
     print(count)
 
+# Character Hashing  #Optimal method  using list, ascii and index
+
+s='azyxyyzaaaa'
+q='d','a','y','x'
+list=[0]*27
+for i in s:
+    ascii=ord(i)
+    index=ascii-97
+    list[index]+=1
+for i in q:
+    ascii=ord(i)
+    index=ascii-97
+    print(list[index])
+
+# Learned recursion (head and tail) and till V12 done and start 13
+
+#7
+
+
+
+
+
+
+
 
 
 
