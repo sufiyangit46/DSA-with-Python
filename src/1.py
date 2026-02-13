@@ -179,8 +179,50 @@ for i in q:
     print(list[index])
 
 # Learned recursion (head and tail) and till V12 done and start 13
+#Head Recursion using global variable
+
+count=0
+def func():
+    global count
+    if count==4:
+        return
+    count+=1
+    func()
+    print('Sufiyan')
+func()
+
+# Without global variable (optimal and safer in interview)
+
+def func(count):
+    if count==4:
+        return
+    func(count+1)
+    print('Sufiyan')
+func(0)
+
+# Tail Recursion using global variable
+
+count=0
+def func():
+    global count
+    if count==4:
+        return
+    print('Sufiyan')
+    count+=1
+    func()
+func()
+
+# Without global variable  (optimal and safer in interview)
+
+def func(count):
+    if count==4:
+        return
+    print('Sufiyan')
+    func(count+1)
+func(0)
 
 #7
+
 
 
 
