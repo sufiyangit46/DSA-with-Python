@@ -222,6 +222,47 @@ def func(count):
 func(0)
 
 #7
+# Recursion using Parameters
+# Print 1 to N    (Tail Recursion)
+
+def para(i,n):
+    if i>n:
+        return
+    print(i)
+    para(i+1,n)
+para(1,4)
+
+# Print N to 1
+
+def para(n):
+    if n==0:
+        return
+    print(n)
+    para(n-1)
+para(4)
+
+# Print 1 to N     (Head Recursion)  (Backtracking)
+
+def para(n):
+    if n==0:
+        return
+    para(n-1)
+    print(n)
+para(4)
+
+# Print N to 1
+
+def para(i,n):
+    if i>n:
+        return
+    para(i+1,n)
+    print(i)
+para(1,4)
+
+
+
+
+
 
 
 
