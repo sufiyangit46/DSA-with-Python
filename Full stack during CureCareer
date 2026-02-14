@@ -1,4 +1,0 @@
-& "C:\Program Files\PostgreSQL\18\bin\psql.exe" --version
-#Command to check postgresql is install or not in windows powershell important
-
-

@@ -270,6 +270,18 @@ def para(sum,i,n):
     para(sum+i,i+1,n)
 para(0,1,10)
 
+# Functional Recursion
+# Sum of 1 to N   [Functional]
+
+def para(n):
+    if n==1:
+        return 1
+    return n+para(n-1)
+print(para(4))
+
+#9
+
+
 
 
 
