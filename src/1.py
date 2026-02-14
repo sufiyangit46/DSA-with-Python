@@ -259,6 +259,20 @@ def para(i,n):
     print(i)
 para(1,4)
 
+#8
+# Parameterized Recursion
+# Sum of 1 to N   [Parameterized]
+
+def para(sum,i,n):
+    if i>n:
+        print(sum)
+        return
+    para(sum+i,i+1,n)
+para(0,1,10)
+
+
+
+
 
 
 
