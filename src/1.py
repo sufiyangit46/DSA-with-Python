@@ -325,6 +325,32 @@ def reverse(arr):
     return arr
 print(reverse(arr))
 
+# String is Palindrome or not using Recursion
+
+a=(input())
+l=0
+r=len(a)-1
+def palin(a,l,r):
+    if l>=r:
+        return True
+    if a[l]!=a[r]:
+        return False
+    return palin(a,l+1,r-1)
+print(palin(a,l,r))
+
+# Using While loop
+
+a=(input())
+l=0
+r=len(a)-1
+def palin(a,l,r):
+    while l<=r:
+        if a[l]!=a[r]:
+            return False
+        l+=1
+        r-=1
+    return True
+print(palin(a,l,r))
 
 
 
