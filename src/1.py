@@ -289,6 +289,47 @@ def fact(num):
 print(fact(5))
 
 #10
+# Reverse an array using Recursion
+
+arr=[1,2,3,4,5,6,7,8]
+l=0
+r=len(arr)-1
+def reverse(arr,l,r):
+    if l>=r:
+        return
+    arr[l],arr[r]=arr[r],arr[l]
+    reverse(arr,l+1,r-1)
+    return arr
+print(reverse(arr,l,r))
+
+# Using While loop
+
+arr=[1,2,3,4,5,6,7,8]
+l=0
+r=len(arr)-1
+def reverse(arr,l,r):
+    while l<=r:
+        arr[l],arr[r]=arr[r],arr[l]
+        l+=1
+        r-=1
+    return arr
+print(reverse(arr,l,r))
+
+# Using For loop
+
+arr=[1,2,3,4,5,6,7,8]
+def reverse(arr):
+    for i in range(len(arr)//2):
+        r=len(arr)-1-i
+        arr[i],arr[r]=arr[r],arr[i]
+    return arr
+print(reverse(arr))
+
+
+
+
+
+
 
 
 
