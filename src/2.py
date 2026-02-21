@@ -54,4 +54,19 @@ def bubble(nums):
     return nums
 print(bubble(nums))
 
+# Insertion Sort
+
+nums=[5,1,8,2,4,7,9,3]
+def insertion(nums):
+    n=len(nums)
+    for i in range(1,n):
+        key=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>key:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=key
+    return nums
+
+
 
