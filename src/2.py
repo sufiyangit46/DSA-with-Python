@@ -111,5 +111,8 @@ def merge_sort(nums):
     return merge_array(left,right)
 print(merge_sort(nums))
 
+#13
+# Revision of Selection, Bubble, Insertion Sort
+
 
 
