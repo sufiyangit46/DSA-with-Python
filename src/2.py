@@ -112,7 +112,7 @@ def merge_sort(nums):
 print(merge_sort(nums))
 
 #13
-# Revision of Selection, Bubble, Insertion Sort
+# Revision of Selection, Bubble, Insertion and Merge Sort
 
 
 
