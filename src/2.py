@@ -115,6 +115,10 @@ print(merge_sort(nums))
 # Revision of Selection, Bubble, Insertion and Merge Sort
 
 #14
+# All Revision and till exam end all topic revision and after exam continue from V......  from 15
+# M 1
+
+
 
 
 
