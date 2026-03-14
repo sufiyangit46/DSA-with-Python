@@ -118,6 +118,35 @@ print(merge_sort(nums))
 # All Revision and till exam end all topic revision and after exam continue from V......  from 15
 # M 1
 
+#15  M 15
+# Quick Sort
+
+nums=[5,1,8,2,4,7,9,3]
+def partition(nums,low,high):
+    pivot=nums[low]
+    i=low
+    j=high
+    while i<j:
+        while nums[i]<=pivot and i<high:
+            i+=1
+        while nums[j]>=pivot and j>low:
+            j-=1
+        if i<j:
+            nums[i],nums[j]=nums[j],nums[i]
+    nums[low],nums[j]=nums[j],nums[low]
+    return j
+def quick(nums,low,high):
+    if low<high:
+        ind=partition(nums,low,high)
+        quick(nums,low,ind-1)
+        quick(nums,ind+1,high)
+quick(nums,0,len(nums)-1)
+print(nums)
+
+
+
+
+
 
 
 
