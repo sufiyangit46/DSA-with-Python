@@ -143,6 +143,8 @@ def quick(nums,low,high):
 quick(nums,0,len(nums)-1)
 print(nums)
 
+# LeetCode Questions
+# Only Optimal solution
 #16
 # Find the largest element in an array
 
@@ -153,6 +155,21 @@ for i in range(0,n):
     if nums[i]>largest:
         largest=nums[i]
 print(largest)                 # TC O(N)  AND SC O(1)
+
+#17
+# Find the 2nd largest element in an array without sorting
+
+nums=[55,32,-97,99,3,67,23]
+n=len(nums)
+largest=nums[0]
+se_largest=nums[0]
+for i in range(n):
+    if nums[i]>largest:
+        se_largest=largest
+        largest=nums[i]
+    elif nums[i]>se_largest and nums[i]!=largest:
+        se_largest=nums[i]
+print(se_largest)                 # TC O(N)  AND SC O(1)
 
 
 
