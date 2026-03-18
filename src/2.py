@@ -171,11 +171,15 @@ for i in range(n):
         se_largest=nums[i]
 print(se_largest)                 # TC O(N)  AND SC O(1)
 
+#18
+# Check if an array is sorted
 
-
-
-
-
-
-
+nums=[1,2,3,4,5,6,7,8]
+def sort(nums):
+    n=len(nums)
+    for i in range(1,n-1):
+        if nums[i]>nums[i+1]:
+            return False
+    return True
+print(sort(nums))
 
