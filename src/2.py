@@ -181,5 +181,21 @@ def sort(nums):
         if nums[i]>nums[i+1]:
             return False
     return True
-print(sort(nums))                # TC O(N)  AND SC O(1)
+print(sort(nums))                # TC O(N) AND SC O(1)
+
+#19
+# Remove duplicates from a sorted array      # Brute force code
+
+nums=[1,1,1,2,2,3,3,4,5,6,9,9,9,9,10]
+freq={}
+n=len(nums)
+for i in range(0,n):
+    freq[nums[i]]=0
+j=0
+for m in freq:
+    freq[m]=nums[j]
+    j+=1
+print(j)                      # TC O(N) AND SC O(N)
+
+
 
