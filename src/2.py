@@ -197,5 +197,20 @@ for m in freq:
     j+=1
 print(j)                      # TC O(N) AND SC O(N)
 
+# Optimal Two Pointer Approach
+
+nums=[1,1,1,2,2,3,3,4,5,6,9,9,9,9,10]
+i=0
+j=1
+n=len(nums)
+if nums==1:
+    print(1)
+while j<n:
+    if nums[j]!=nums[i]:
+        i+=1
+        nums[j],nums[i]=nums[i],nums[j]
+    j+=1
+print(i+1)                    # TC O(N) AND SC O(1)
+
 
 
