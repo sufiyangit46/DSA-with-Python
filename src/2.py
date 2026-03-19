@@ -181,5 +181,5 @@ def sort(nums):
         if nums[i]>nums[i+1]:
             return False
     return True
-print(sort(nums))
+print(sort(nums))                # TC O(N)  AND SC O(1)
 
