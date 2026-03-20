@@ -212,5 +212,11 @@ while j<n:
     j+=1
 print(i+1)                    # TC O(N) AND SC O(1)
 
+#20
+# Right Rotate an Array by 1 Place            # By Slicing
 
+nums=[1,1,1,2,2,3,3,4,5,6,9,9,9,9,10]
+n=len(nums)
+nums[:]=[nums[n-1]]+nums[0:n-1]             # Can't concat int and list so we make int list by adding []
+print(nums)                          # TC O(N) AND SC O(1) because we use [:] to perform inplace
 
