@@ -229,3 +229,16 @@ for i in range(n-2,-1,-1):
     nums[i+1]=nums[i]
 nums[0]=temp
 print(nums)                      # TC O(N) AND SC O(1)
+
+#21
+# Right Rotate an Array by k Place
+# Brute Method
+
+nums=[1,1,1,2,2,3,3,4,5,6,9,9,9,9,10]
+k=4
+n=len(nums)
+r=k%n
+for _ in range(0,r):
+    e=nums.pop()
+    nums.insert(0,e)
+print(nums)                    # TC O(r*n) AND SC O(1)
