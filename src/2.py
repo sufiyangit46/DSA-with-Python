@@ -251,3 +251,21 @@ n=len(nums)
 k=k%n
 nums[:]=nums[n-k:]+nums[:n-k]
 print(nums)                    # TC O(N) AND SC O(1)
+
+# Optimal Solution (Three Reversals)
+
+nums=[1,1,1,2,2,3,3,4,5,6,9,9,9,9,10]
+n=len(nums)
+k=5
+def reverse(nums,l,r):
+    if nums==1:
+        return nums
+    while l<r:
+        nums[l],nums[r]=nums[r],nums[l]
+        l+=1
+        r-=1
+    return nums
+reverse(nums,n-k,n-1)        # Reverse last k element
+reverse(nums,0,n-k-1)     # Reverse remaining elements
+reverse(nums,0,n-1)       # Reverse whole array
+print(nums)                 # TC O(N) AND SC O(1)
