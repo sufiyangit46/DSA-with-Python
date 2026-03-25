@@ -269,3 +269,20 @@ reverse(nums,n-k,n-1)        # Reverse last k element
 reverse(nums,0,n-k-1)     # Reverse remaining elements
 reverse(nums,0,n-1)       # Reverse whole array
 print(nums)                 # TC O(N) AND SC O(1)
+
+#22
+# Move Zeros to the end of the List
+# Brute Force Code
+
+nums=[1,2,0,2,3,5,0,4,0,0,2,5]
+n=len(nums)
+temp=[]
+for i in range(0,n):
+    if nums[i]!=0:
+        temp.append(nums[i])
+nz=len(temp)
+for i in range(0,nz):
+    nums[i]=temp[i]
+for i in range(nz,n):
+    nums[i]=0
+print(nums)                 # TC O(N) AND SC O(N)
