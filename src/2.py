@@ -286,3 +286,26 @@ for i in range(0,nz):
 for i in range(nz,n):
     nums[i]=0
 print(nums)                 # TC O(N) AND SC O(N)
+
+# Optimal Solution
+
+nums=[1,2,0,2,3,5,0,4,0,0,2,5]
+def zero(nums):
+    n=len(nums)
+    if n==1:
+        return
+    i=0
+    while i<n:
+        if nums[i]==0:
+            break
+        i+=1
+    if i==n:
+        return
+    j=i+1
+    while j<n:
+        if nums[j]!=0:
+            nums[j],nums[i]=nums[i],nums[j]
+            i+=1
+        j+=1
+    return nums
+print(zero(nums))            # TC O(N) AND SC O(1)
