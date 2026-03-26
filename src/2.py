@@ -309,3 +309,16 @@ def zero(nums):
         j+=1
     return nums
 print(zero(nums))            # TC O(N) AND SC O(1)
+
+#23
+# Implementing Linear Search    # We will return the index of first occurrence of an element and if it is not present we will return -1
+
+nums=[5,4,9,8,1,6,-100,-10,88]
+n=len(nums)
+target=9
+for i in range(0,n):
+    if nums[i]==target:
+        print(i)
+        break
+if nums[i]!=target:
+    print(-1)               # TC O(N) AND SC O(1)
