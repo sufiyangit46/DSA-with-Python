@@ -322,3 +322,34 @@ for i in range(0,n):
         break
 if nums[i]!=target:
     print(-1)               # TC O(N) AND SC O(1)
+
+#24
+# Merge 2 Sorted Arrays Without Duplicates       # Two Pointer Approach
+
+nums1=[1,2,3,4]
+nums2=[1,1,3,4,5,6,7]
+def merge(nums1,nums2):
+    result=[]
+    i=0
+    j=0
+    n=len(nums1)
+    m=len(nums2)
+    while i<n and j<m:
+        if nums1[i]<=nums2[j]:
+            if len(result)==0 or result[-1]!=nums1[i]:
+                result.append(nums1[i])
+            i+=1
+        else:
+            if len(result)==0 or result[-1]!=nums2[j]:
+                result.append(nums2[j])
+            j+=1
+    while i<n:
+        if len(result)==0 or result[-1]!=nums1[i]:
+            result.append(nums1[i])
+        i+=1
+    while j<m:
+        if len(result)==0 or result[-1]!=nums2[j]:
+            result.append(nums2[j])
+        j+=1
+    return result
+print(merge(nums1,nums2))              # TC O(n+m) AND SC O(1)/O(n+m)
