@@ -363,3 +363,16 @@ n=len(nums)
 for i in range(0,n+1):
     if i not in nums:
         print(i)                     # TC O(N2) AND SC O(1)
+
+# Better Method
+
+nums=[4,5,2,0,3]
+n=len(nums)
+freq={}
+for i in range(0,n+1):
+    freq[i]=0
+for num in nums:
+    freq[num]=1
+for k,v in freq.items():
+    if v==0:
+        print(k)                   # TC O(N) AND O(1)
