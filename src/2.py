@@ -353,3 +353,13 @@ def merge(nums1,nums2):
         j+=1
     return result
 print(merge(nums1,nums2))              # TC O(n+m) AND SC O(1)/O(n+m)
+
+#25
+# Find Missing Number in an Array
+# Brute Method
+
+nums=[3,0,1]
+n=len(nums)
+for i in range(0,n+1):
+    if i not in nums:
+        print(i)                     # TC O(N2) AND SC O(1)
