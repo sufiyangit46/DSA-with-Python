@@ -383,4 +383,4 @@ nums=[1,2,3,4,5,6,7,0,9]
 n=len(nums)
 totsum=(n*(n+1))//2
 numsum=sum(nums)
-print(totsum-numsum)              # TC O(N) AND O(1)
+print(totsum-numsum)              # TC O(N) AND SC O(1)
