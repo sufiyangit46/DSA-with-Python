@@ -375,4 +375,12 @@ for num in nums:
     freq[num]=1
 for k,v in freq.items():
     if v==0:
-        print(k)                   # TC O(N) AND O(1)
+        print(k)                   # TC O(N) AND SC O(N)
+
+# Optimal Method
+
+nums=[1,2,3,4,5,6,7,0,9]
+n=len(nums)
+totsum=(n*(n+1))//2
+numsum=sum(nums)
+print(totsum-numsum)              # TC O(N) AND O(1)
