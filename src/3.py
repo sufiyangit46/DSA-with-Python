@@ -11,3 +11,14 @@ for i in range(0,len(nums)):
         max_count=max(max_count,count)
         count=0
 print(max_count)                     # TC O(N) AND SC O(1)
+
+#27
+# Two Sum Problem             # Brute Method
+
+nums=[2,5,2,6,9,4,5,2]
+target=13
+n=len(nums)
+for i in range(0,n-1):
+    for j in range(i+1,n):
+        if nums[i]+nums[j]==target:
+            print([i,j])              # TC O(N2) AND SC O(1)
