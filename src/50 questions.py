@@ -33,3 +33,22 @@ else:
 
 # TC O(N) AND SC O(1)
 # TWO POINTER TECHNIQUE IS THE APPROACH TO CHECK WHETHER IT IS PALINDROME OR NOT
+
+
+# 3 FIND THE FIRST NON-REPEATING CHARACTER
+
+ch='shaikh'
+n=len(ch)
+di={}
+for i in ch:
+    if i not in di:
+        di[i]=1
+    else:
+        di[i]+=1
+for j in ch:
+    if di[j]==1:
+        print(j)
+        break
+
+# TC O(N) AND SC O(N)
+# WE USE HASH MAP(DICTIONARY) TO STORE FREQUENCY AND THEN LOOP ON ORIGINAL STRING TO CHECK THE FIRST NON-REPEATING CHARACTER
