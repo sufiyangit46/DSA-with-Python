@@ -52,3 +52,29 @@ for j in ch:
 
 # TC O(N) AND SC O(N)
 # WE USE HASH MAP(DICTIONARY) TO STORE FREQUENCY AND THEN LOOP ON ORIGINAL STRING TO CHECK THE FIRST NON-REPEATING CHARACTER
+
+
+# 4 CHECK WHETHER TWO STRINGS ARE ANAGRAMS
+
+ch1='listen'
+ch2='silent'
+di={}
+if len(ch1)!=len(ch2):
+    print("Not Anagram")
+    exit()
+for i in ch1:
+    if i not in di:
+        di[i]=1
+    else:
+        di[i]+=1
+for i in ch2:
+    if i not in di:
+        print("Not Anagram")
+        break
+    di[i]-=1
+for v in di.values():
+    if v!=0:
+        print("Not Anagram")
+        break
+else:
+    print("Anagram")
