@@ -101,3 +101,6 @@ for key,value in di.items():
         m=value
         fr=key
 print(fr)
+
+# TC O(N) AND SC O(N)
+# WE SOLVE THIS USING HASH MAP TO STORE CHARACTER AND THEN RUN A LOOP TO GET THE HIGHEST FREQUENCY CHARACTER AND PRINT THE CHARACTER
