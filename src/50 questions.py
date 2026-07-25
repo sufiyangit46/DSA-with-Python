@@ -116,3 +116,6 @@ for i in str[1:]:
     while not i.startswith(prefix):
         prefix=prefix[:-1]
 print(prefix)
+
+# TC O(N*M2) AND SC O(1)
+# WE SOLVE THIS USING HORIZONTAL APPROACH FIRST WE TAKE FIRST STRING AND COMPARE REST OF THEM THAT STARTS WITH SAME CHARACTER AND KEEP SHRINKING
