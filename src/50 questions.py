@@ -104,3 +104,15 @@ print(fr)
 
 # TC O(N) AND SC O(N)
 # WE SOLVE THIS USING HASH MAP TO STORE CHARACTER AND THEN RUN A LOOP TO GET THE HIGHEST FREQUENCY CHARACTER AND PRINT THE CHARACTER
+
+
+# 6 LONGEST COMMON PREFIX
+
+str=['flow','flower','flight']
+if not str:
+    print('')
+prefix=str[0]
+for i in str[1:]:
+    while not i.startswith(prefix):
+        prefix=prefix[:-1]
+print(prefix)
