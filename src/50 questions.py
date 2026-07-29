@@ -119,3 +119,18 @@ print(prefix)
 
 # TC O(N*M2) AND SC O(1)
 # WE SOLVE THIS USING HORIZONTAL APPROACH FIRST WE TAKE FIRST STRING AND COMPARE REST OF THEM THAT STARTS WITH SAME CHARACTER AND KEEP SHRINKING
+
+
+# 7 COMPRESS A STRING WITH COUNTS
+
+ch='aaabbc'
+result=''
+count=1
+for i in range(1,len(ch)):
+    if ch[i]==ch[i-1]:
+        count+=1
+    else:
+        result+=ch[i-1]+str(count)
+        count=1
+result+=ch[-1]+str(count)
+print(result)
