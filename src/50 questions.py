@@ -138,3 +138,20 @@ print(result)
 # TC O(N) AND SC O(N)
 # WE SOLVE THIS USING COMPRESS THE STRING APPROACH WHERE INITIAL COUNT IS 1 AND EMPTY STRING TO STORE RESULT AND RUN A LOOP ON THE STRING
 # IF PREVIOUS CH' IS SAME THEN COUNT+=1 IF NOT THEN WE ADD IT TO RESULT AND WE MANUALLY ADDED THE LAST CHARACTER BEACUSE THE LOOP END AT LAST CH'
+
+
+# 8 VALIDATE PARENTHESES
+
+st='({[]})'
+def parent(st):
+    pairs={')':'(','}':'{',']':'['}
+    stack=[]
+    for i in st:
+        if i in '({[':
+            stack.append(i)
+        elif i in ')}]':
+            if not stack or stack[-1]!=pairs[i]:
+                return False
+            stack.pop()
+    return not stack
+print(parent(st))
