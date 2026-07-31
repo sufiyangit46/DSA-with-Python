@@ -159,3 +159,23 @@ print(parent(st))
 # TC O(N) AND SC O(N)
 # WE SOLVED THIS USING A STACK TO STORE THE OPEN BRACKET AND CREATED PAIRS TO MATCH THE STACK TOP ELEMENT WITH PAIRS IF NOT MATCH RETURN FALSE
 # THEN WE POP THE STACK TOP ELEMENT IF THE PAIR IS MATCHED AND LASTLY RETURN TRUE IF STACK IS EMPTY BECAUSE IF PAIR MATCHED NOTHING LEFT
+
+
+# 9 COUNT VOWELS AND CONSONANTS
+
+text='Data'
+def convo(text):
+    if not text:
+        return 0, 0
+    hash_set={'a','e','i','o','u','A','E','I','O','U'}
+    vowels=0
+    consonants=0
+    for i in text:
+        if i in hash_set:
+            vowels+=1
+        elif i.isalpha():
+            consonants+=1
+    return vowels, consonants
+vowels, consonants = convo(text)
+print('Vowels:',vowels)
+print('Consonants:',consonants)
