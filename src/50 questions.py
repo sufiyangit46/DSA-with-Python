@@ -198,3 +198,6 @@ def freq(text):
             map[word]+=1
     return dict(map)
 print(freq(text))
+
+# TC O(N) AND SC O(N)
+# WE SOLVED THIS BY MAKING A DEFAULT DICT THEN WE LOWER AND SPLIT THE INPUT TO STORE EACH WORD AND STRIP THE PUNCTUATION THEN STORE IN HASHMAP
