@@ -183,3 +183,18 @@ print('Consonants:',consonants)
 # TC O(N) AND SC O(1)
 # WE SLOVED THIS USING HASHSET WHICH STORES ONLY 10 CH' AND SEARCHES IN O(1) TIME AND WE DON'T USE HASHMAP FOR THIS
 # WE LOOP OVER EACH CH' AND CHECK IN HASHSET IF IT IS THERE THAN V+=1 AND CHECK IF THE CH' IS ALPHABET THAN C+=1 FOR (SPACES AND SPECIAL CH')
+
+
+# 10 WORD FREQUENCY FROM A SENTENCE
+
+import string
+from collections import defaultdict
+text='Data, data engineering!'
+def freq(text):
+    map=defaultdict(int)
+    for word in text.lower().split():
+        word=word.strip(string.punctuation)
+        if word:
+            map[word]+=1
+    return dict(map)
+print(freq(text))
