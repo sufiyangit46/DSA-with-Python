@@ -218,3 +218,17 @@ print(duplicate(num))
 
 # TC O(N) AND SC O(N)
 # WE SOLVED THIS USING HASHSET FOR O(1) TIME CHECK AND LIST TO STORE AND PRESERVE ORDER AND ITERATE EACH ELEMENT USING FOR LOOP TO STORE AND CHECK
+
+
+# 12 FIND THE MISSING NUMBER FROM 1 TO N
+
+nums=[1,2,4,5]
+def missing(nums):
+    n=len(nums)
+    actual_sum=(n+1)*(n+2)//2
+    expected_sum=sum(nums)
+    return actual_sum-expected_sum
+print(missing(nums))
+
+# TC O(N) SC O(1)
+# WE USED THE SUM FORMULA APPROACH TO SOLVE THIS MISSING NUMBER AND THE OTHER APPROACH IS XOR WHOSE TC AND SC IS SAME
