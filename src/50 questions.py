@@ -215,3 +215,6 @@ def duplicate(num):
             result.append(i)
     return result
 print(duplicate(num))
+
+# TC O(N) AND SC O(N)
+# WE SOLVED THIS USING HASHSET FOR O(1) TIME CHECK AND LIST TO STORE AND PRESERVE ORDER AND ITERATE EACH ELEMENT USING FOR LOOP TO STORE AND CHECK
