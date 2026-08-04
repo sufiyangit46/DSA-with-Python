@@ -201,3 +201,17 @@ print(freq(text))
 
 # TC O(N) AND SC O(N)
 # WE SOLVED THIS BY MAKING A DEFAULT DICT THEN WE LOWER AND SPLIT THE INPUT TO STORE EACH WORD AND STRIP THE PUNCTUATION THEN STORE IN HASHMAP
+
+
+# 11 REMOVE DUPLICATES WHILE PRESERVING ORDER
+
+num=[3,1,3,2,1]
+def duplicate(num):
+    hashset=set()
+    result=[]
+    for i in num:
+        if i not in hashset:
+            hashset.add(i)
+            result.append(i)
+    return result
+print(duplicate(num))
