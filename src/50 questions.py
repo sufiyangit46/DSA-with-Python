@@ -265,3 +265,23 @@ print(two_sum(nums,target))
 
 # TC O(N) AND SC O(N)
 # WE SOLVED THIS USING HASHMAP APPROACH AND THE OTHER APPROACH TC IS O(N2) SO THIS IS OPTIMAL SOLUTION
+
+# 14 ROTATE A LIST BY K STEPS
+
+nums=[1,2,3,4,5]
+k=2
+def rootate(nums,k):
+    if not nums:
+        return 0
+    n=len(nums)
+    k=k%n
+    def reverse(left,right):
+        while left<right:
+            nums[left],nums[right]=nums[right],nums[left]
+            left+=1
+            right-=1
+    reverse(0,n-1)
+    reverse(0,k-1)
+    reverse(k,n-1)
+    return nums
+print(rootate(nums,k))
