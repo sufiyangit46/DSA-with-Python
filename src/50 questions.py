@@ -246,3 +246,22 @@ print(missing(nums))
 
 # TC O(N) AND SC O(N)
 # WE FIRST ADD ALL NUMS ELEMENT IN SET THAN ITERATE FROM 1 TO N+2 TO CHECK WHICH NUMBER IS MISSING AND THE CHECKING TIME OF HASHSET IS O(1)
+
+
+# 13 TWO SUM
+
+nums=[10,7,2,15]
+target=9
+def two_sum(nums,target):
+    hashmap={}
+    n=len(nums)
+    for i in range(0,n):
+        remaining=target-nums[i]
+        if remaining in hashmap:
+            return [hashmap[remaining],i]
+        else:
+            hashmap[nums[i]]=i
+print(two_sum(nums,target))
+
+# TC O(N) AND SC O(N)
+# WE SOLVED THIS USING HASHMAP APPROACH AND THE OTHER APPROACH TC IS O(N2) SO THIS IS OPTIMAL SOLUTION
