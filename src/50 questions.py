@@ -232,3 +232,17 @@ print(missing(nums))
 
 # TC O(N) SC O(1)
 # WE USED THE SUM FORMULA APPROACH TO SOLVE THIS MISSING NUMBER AND THE OTHER APPROACH IS XOR WHOSE TC AND SC IS SAME
+
+# OTHER APPROACH USING HASHSET
+
+nums=[1,2,4,5]
+def missing(nums):
+    n=len(nums)
+    hashset=set(nums)
+    for i in range(1,n+2):
+        if i not in hashset:
+            return i
+print(missing(nums))
+
+# TC O(N) AND SC O(N)
+# WE FIRST ADD ALL NUMS ELEMENT IN SET THAN ITERATE FROM 1 TO N+2 TO CHECK WHICH NUMBER IS MISSING AND THE CHECKING TIME OF HASHSET IS O(1)
