@@ -290,3 +290,19 @@ print(rootate(nums,k))
 # WE SOLVED THIS USING OPTIMAL INPLACE ROTATE WITHOUT ANY EXTRA SPACE AND K%N IS USED IF K IS GREATER THAN THE SIZE OF N AND TOTAL TIME IS O(N)
 # FIRST WE REVERSE ALL ELEMENT THAN WE REVERSE FROM 0 TO K ELEMENT AND AFTER THAT WE REVERSE THE REMAINING ELEMENT FROM K TO LAST
 # THE SECOND APPROACH TO SOLVE THIS IS USING A NEW ARRAY IN WHICH WE APPEND AND THE TIME AND SPACE COMPLEXITY IS TC O(N) AND SC O(N)
+
+
+# MOVE ALL ZEROS TO THE END
+
+nums=[0,1,0,3,12,0]
+def move_zeros(nums):
+    n=len(nums)
+    i=0
+    j=0
+    while j<n:
+        if nums[j]!=0:
+            nums[i],nums[j]=nums[j],nums[i]
+            i+=1
+        j+=1
+    return nums
+print(move_zeros(nums))
