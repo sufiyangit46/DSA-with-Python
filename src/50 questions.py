@@ -315,7 +315,7 @@ print(move_zeros(nums))
 
 num1=[1,3,5]
 num2=[2,4]
-def merge_sort(num1,num2):
+def merge_list(num1,num2):
     n,m=len(num1),len(num2)
     i,j=0,0
     result=[]
@@ -326,13 +326,14 @@ def merge_sort(num1,num2):
         else:
             result.append(num2[j])
             j+=1
-    if i<n:
-        while i<n:
-            result.append(num1[i])
-            i+=1
-    if j<m:
-        while j<m:
-            result.append(num2[j])
-            j+=1
+    while i<n:
+        result.append(num1[i])
+        i+=1
+    while j<m:
+        result.append(num2[j])
+        j+=1
     return result
-print(merge_sort(num1,num2))
+print(merge_list(num1,num2))
+
+# TC O(n+m) AND SC O(n+m)
+# WE SOLVED THIS USING A NEW LIST AND ITERATE ON BOTH LIST FROM 0 AND APPEND THE SMALL ELEMENT AND CONTINUE THIS TILL THE END ELEMENT OF LIST
