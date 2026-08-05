@@ -309,3 +309,30 @@ print(move_zeros(nums))
 
 # TC O(N) AND SC O(1)
 # WE SOLVED THIS USING TWO POINTER APPROACH WHERE WE START BOTH POINTER FROM 0 AND THE SECOND APPROACH TO SOLVE USES EXTRA SPACE O(N) FOR NEW ARRAY
+
+
+# 16 MERGE TWO SORTED LISTS
+
+num1=[1,3,5]
+num2=[2,4]
+def merge_sort(num1,num2):
+    n,m=len(num1),len(num2)
+    i,j=0,0
+    result=[]
+    while i<n and j<m:
+        if num1[i]<num2[j]:
+            result.append(num1[i])
+            i+=1
+        else:
+            result.append(num2[j])
+            j+=1
+    if i<n:
+        while i<n:
+            result.append(num1[i])
+            i+=1
+    if j<m:
+        while j<m:
+            result.append(num2[j])
+            j+=1
+    return result
+print(merge_sort(num1,num2))
