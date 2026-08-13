@@ -122,16 +122,19 @@ print(prefix)
 # 7 COMPRESS A STRING WITH COUNTS
 
 ch='aaabbc'
-result=''
-count=1
-for i in range(1,len(ch)):
-    if ch[i]==ch[i-1]:
-        count+=1
-    else:
-        result+=ch[i-1]+str(count)
-        count=1
-result+=ch[-1]+str(count)
-print(result)
+def compress_string(ch):
+    result=[]
+    count=1
+    n=len(ch)
+    for i in range(1,n):
+        if ch[i]==ch[i-1]:
+            count+=1
+        else:
+            result.append(ch[i-1]+str(count))
+            count=1
+    result.append(ch[-1]+str(count))
+    return ''.join(result)
+print(compress_string(ch))
 
 # TC O(N) AND SC O(N)
 # WE SOLVE THIS USING COMPRESS THE STRING APPROACH WHERE INITIAL COUNT IS 1 AND EMPTY STRING TO STORE RESULT AND RUN A LOOP ON THE STRING
