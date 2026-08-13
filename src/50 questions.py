@@ -18,18 +18,21 @@ print(''.join(char))
 # 2 CHECK WHETHER A STRING IS A PALINDROME
 
 num=(input())
-a=num
-n=len(a)
-i=0
-j=n-1
-while i<j:
-    if a[i]!=a[j]:
-        print("Not Palindrome")
-        break
-    i+=1
-    j-=1
-else:
-    print("Palindrome")
+def is_palindrome(num):
+    n=len(num)
+    i=0
+    j=n-1
+    while i<j:
+        while i<j and not num[i].isalnum():
+            i+=1
+        while i<j and not num[j].isalnum():
+            j-=1
+        if num[i].lower()!=num[j].lower():
+            return False
+        i+=1
+        j-=1
+        return True
+print(is_palindrome(num))
 
 # TC O(N) AND SC O(1)
 # TWO POINTER TECHNIQUE IS THE APPROACH TO CHECK WHETHER IT IS PALINDROME OR NOT
