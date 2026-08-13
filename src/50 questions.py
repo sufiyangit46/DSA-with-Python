@@ -61,31 +61,26 @@ for j in ch:
 
 ch1='listen'
 ch2='silent'
-di={}
-if len(ch1)!=len(ch2):
-    print("Not Anagram")
-    exit()
-for i in ch1:
-    if i not in di:
-        di[i]=1
-    else:
-        di[i]+=1
-for i in ch2:
-    if i not in di:
-        print("Not Anagram")
-        break
-    di[i]-=1
-for v in di.values():
-    if v!=0:
-        print("Not Anagram")
-        break
-else:
-    print("Anagram")
+def is_anagram(ch1,ch2):
+    if len(ch1)!=len(ch2):
+        return False
+    hashmap={}
+    for i in ch1:
+        hashmap[i]=hashmap.get(i,0)+1
+    for i in ch2:
+        if i not in hashmap:
+            return False
+        hashmap[i]-=1
+    for v in hashmap.values():
+        if v!=0:
+            return False
+    return True
+print(is_anagram(ch1,ch2))
 
 # TC O(N) AND SC O(N)
 # ANAGRAM STRING ARE THOSE WHOSE CHARACTER AND THEIR LENGTH IS SAME AND ORDER IS NOT NECESSARY SO WE SOLVE THIS USING HASH MAP(DICTIONARY)
 # FIRST WE STORE ALL CHARACTER IN DICTIONARY AND THEN CHECK THE 2 STRING CHARACTER ARE PRESENT OR NOT THEN WE SUBTRACT THE COUNT OF CHARACTER
-# SO IF THE VALUE IN DICTIONARY IS 0 THEN IT IS ANAGRAM IF NOT THEN IT IS NOT ANAGRAM
+# SO IF THE VALUE IN DICTIONARY IS 0 THEN IT IS ANAGRAM IF NOT THEN IT IS NOT ANAGRAM AND THE 2 APPROACH IS SORTING STRING
 
 
 # 5 FIND THE MOST FREQUENT CHARACTER
