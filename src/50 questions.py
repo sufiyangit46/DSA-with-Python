@@ -86,19 +86,18 @@ print(is_anagram(ch1,ch2))
 # 5 FIND THE MOST FREQUENT CHARACTER
 
 ch='banana'
-di={}
-for i in ch:
-    if i not in di:
-        di[i]=1
-    else:
-        di[i]+=1
-m=0
-fr=''
-for key,value in di.items():
-    if value>m:
-        m=value
-        fr=key
-print(fr)
+def most_frequent(ch):
+    hashmap={}
+    for i in ch:
+        hashmap[i]=hashmap.get(i,0)+1
+    max=0
+    result=''
+    for k,v in hashmap.items():
+        if v>max:
+            max=v
+            result=k
+    return result
+print(most_frequent(ch))
 
 # TC O(N) AND SC O(N)
 # WE SOLVE THIS USING HASH MAP TO STORE CHARACTER AND THEN RUN A LOOP TO GET THE HIGHEST FREQUENCY CHARACTER AND PRINT THE CHARACTER
