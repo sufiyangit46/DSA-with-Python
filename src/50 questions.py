@@ -123,6 +123,8 @@ print(prefix)
 
 ch='aaabbc'
 def compress_string(ch):
+    if not ch:
+        return ''
     result=[]
     count=1
     n=len(ch)
